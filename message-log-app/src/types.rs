@@ -29,7 +29,7 @@ pub struct SuccessResponse {
 #[derive(Serialize, Deserialize)]
 pub struct ErrorResponse {
     pub success: bool,
-    pub code: u16,
+    pub code: String,
     pub message: String,
 }
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
@@ -57,4 +57,3 @@ pub enum MessageType {
     TerminalCommand,
     Other(String),
 }
-

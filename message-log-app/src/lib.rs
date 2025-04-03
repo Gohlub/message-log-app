@@ -20,6 +20,7 @@ wit_bindgen::generate!({
     generate_unused_types: true,
     additional_derives: [serde::Deserialize, serde::Serialize, process_macros::SerdeJsonInto],
 });
+
 // Configuration for the application
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct AppConfig {

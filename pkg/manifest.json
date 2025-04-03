@@ -1,0 +1,15 @@
+[
+    {
+        "process_name": "message-log-app",
+        "process_wasm_path": "/message-log-app.wasm",
+        "on_exit": "Restart",
+        "request_networking": true,
+        "request_capabilities": [
+            "http-server:distro:sys",
+            "vfs:distro:sys",
+            "timer:distro:sys"
+        ],
+        "grant_capabilities": [],
+        "public": true
+    }
+]

@@ -1,0 +1,21 @@
+{
+    "name": "message-log-app Test",
+    "description": "A test for message-log-app.",
+    "image": "",
+    "properties": {
+        "package_name": "message-log-app-test",
+        "current_version": "0.1.0",
+        "publisher": "template.os",
+        "mirrors": [],
+        "code_hashes": {
+            "0.1.0": ""
+        },
+        "wit_version": 1,
+        "dependencies": [
+            "message-log-app:template.os",
+            "tester:sys"
+        ]
+    },
+    "external_url": "",
+    "animation_url": ""
+}

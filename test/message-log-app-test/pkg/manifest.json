@@ -1,0 +1,17 @@
+[
+    {
+        "process_name": "message-log-app-test",
+        "process_wasm_path": "/message-log-app-test.wasm",
+        "on_exit": "Restart",
+        "request_networking": false,
+        "request_capabilities": [
+            "message-log-app:message-log-app:template.os",
+            "vfs:distro:sys"
+        ],
+        "grant_capabilities": [
+            "message-log-app:message-log-app:template.os",
+            "vfs:distro:sys"
+        ],
+        "public": true
+    }
+]

@@ -1,0 +1,71 @@
+interface app {
+    // This interface contains function signature definitions that will be used
+    // by the hyper-bindgen macro to generate async function bindings.
+    //
+    // NOTE: This is currently a hacky workaround since WIT async functions are not
+    // available until WASI Preview 3. Once Preview 3 is integrated into Hyperware,
+    // we should switch to using proper async WIT function signatures instead of
+    // this struct-based approach with hyper-bindgen generating the async stubs.
+
+    use standard.{address};
+
+    // Function signature for: get-status (http)
+    record get-status-signature-http {
+        target: string,
+        returning: status-response
+    }
+
+    // Function signature for: get-history (http)
+    record get-history-signature-http {
+        target: string,
+        returning: history-response
+    }
+
+    // Function signature for: clear-history (http)
+    record clear-history-signature-http {
+        target: string,
+        returning: success-response
+    }
+
+    // Function signature for: log-custom-message (http)
+    record log-custom-message-signature-http {
+        target: string,
+        message-type: string,
+        content: string,
+        returning: success-response
+    }
+
+    // Function signature for: external-get-status (remote)
+    record external-get-status-signature-remote {
+        target: address,
+        returning: status-response
+    }
+
+    // Function signature for: external-get-history (remote)
+    record external-get-history-signature-remote {
+        target: address,
+        returning: history-response
+    }
+
+    // Function signature for: external-clear-history (remote)
+    record external-clear-history-signature-remote {
+        target: address,
+        returning: success-response
+    }
+
+    // Function signature for: log-external-message (remote)
+    record log-external-message-signature-remote {
+        target: address,
+        message-type: string,
+        content: string,
+        returning: success-response
+    }
+
+    // Function signature for: log-external-message (local)
+    record log-external-message-signature-local {
+        target: address,
+        message-type: string,
+        content: string,
+        returning: success-response
+    }
+}

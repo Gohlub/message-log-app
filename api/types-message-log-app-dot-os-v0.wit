@@ -1,0 +1,4 @@
+world types-message-log-app-dot-os-v0 {
+    import app;
+    include lib;
+}

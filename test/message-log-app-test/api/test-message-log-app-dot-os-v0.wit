@@ -1,0 +1,5 @@
+world test-message-log-app-dot-os-v0 {
+    import tester;
+    import app;
+    include process-v1;
+}
